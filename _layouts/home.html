@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    {% include google_analytics.html %}
+    {% seo %}
+    {% include meta.html %}
+    <link rel="stylesheet" href="{{ '/assets/css/home.css?v=' | append: site.github.build_revision | relative_url }}">
+  </head>
+  <body>
+    {{ content }}
+  </body>
+</html>
