@@ -4,4 +4,652 @@ image: /assets/ogp.png
 title: 平成Ruby会議 01
 ---
 
-<a href="https://heiseirb.connpass.com/"><img src="{{ '/assets/logo.png?v=' | append: site.github.build_revision | relative_url }}" width="320" height="226" alt="" /></a>
+
+<canvas class="bg_canvas"></canvas>
+
+
+<section class="keyVisual">
+  <div class="keyVisual_inner">
+    <header class="header">
+      <div class="header_inner">
+        <div class="logo_s">
+          <a href="/kaigi01"><img src="{{ '/assets/kaigi01/logo_s.svg?v=' | append: site.github.build_revision | relative_url }}" alt="平成Ruby会議"></a>
+        </div>
+        <nav class="header_nav">
+          <ul class="header_nav_inner">
+            <li class="header_nav_item">about</li>
+            <li class="header_nav_item">speakers</li>
+            <li class="header_nav_item">schedule</li>
+            <li class="header_nav_item">sponsors</li>
+            <li class="header_nav_item btn_nav"><a href="">registration</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div>
+    </div>
+
+    <div class="btn_wrapper">
+      <div class="btn_cfp">
+        <a href="">become a speaker</a>
+      </div>
+      <div class="btn_main">
+        <a href="">registration</a>
+      </div>
+    </div>
+
+    <div class="notice">
+      <div class="notice_i">i</div>
+      <div class="notice_cont"> 
+        <p class="notice_txt">
+          ご参加前に<a href="" class="notice_link">アンチハラスメントポリシー</a>ご一読ください
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="about container">
+  <h2>平成<span>Ruby</span>会議とは</h2>
+  <article>
+    <p class="about_txt">
+      平成.rbは、平成生まれのRubyエンジニアで集まり、
+      <br>ステップアップして行きたいという思いで作ったコミュニティです。
+      <br>
+      <br>今回、令和元年最後ということで、平成生まれだけでなく、
+      <br>各世代で交流できるカンファレンスを開催することとなりました。
+      <br>1セッション15min 2トラックという構成で
+      <br>Rubyに関する知見や普段やられている等身大の取り組みを共有しRubyをより深く学ぶ場を設けられたらと思います。
+      <br>
+      <br>みなさまのご参加を心よりお待ちしています。
+    </p>
+  </article>
+</section>
+
+
+<section id="speakers" class="speakers container">
+  <h2 class="ttl_main">Keynote Speakers</h2>
+  <div class="speakers_wrapper">
+    <div class="speakers_item">
+      <div><img class="speakers_thm" src="{{ '/assets/kaigi01/thm_speaker01.jpg?v=' | append: site.github.build_revision | relative_url }}" alt="平成Ruby会議"></div>
+      <p>Junichi Ito</p>
+      <div class="icon_wrapper">
+        <a href=""><img class="icon_twitter" src="{{ '/assets/kaigi01/icon_twitter.svg?v=' | append: site.github.build_revision | relative_url }}" alt="twitter"></a>
+        <a href=""><img class="icon_github" src="{{ '/assets/kaigi01/icon_github.svg?v=' | append: site.github.build_revision | relative_url }}" alt="github"></a>
+      </div>
+    </div>
+    <div class="speakers_item">
+      <div><img class="speakers_thm" src="{{ '/assets/kaigi01/thm_speaker02.jpg?v=' | append: site.github.build_revision | relative_url }}" alt="平成Ruby会議"></div>
+      <p>fuqda</p>
+      <div class="icon_wrapper">
+        <a href=""><img class="icon_twitter" src="{{ '/assets/kaigi01/icon_twitter.svg?v=' | append: site.github.build_revision | relative_url }}" alt="twitter"></a>
+        <a href=""><img class="icon_github" src="{{ '/assets/kaigi01/icon_github.svg?v=' | append: site.github.build_revision | relative_url }}" alt="github"></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="schedules" class="schedules container">
+  <h2 class="ttl_main">Schedule</h2>
+  <div class="schedules_cont">
+    <aside class="schedules_aside">
+      <div class="schedules_aside_item"><p class="schedules_aside_time">13:00</p></div>
+      <div class="schedules_aside_item"><p class="schedules_aside_time">14:00</p></div>
+      <div class="schedules_aside_item"><p class="schedules_aside_time">15:00</p></div>
+      <div class="schedules_aside_item"><p class="schedules_aside_time">16:00</p></div>
+      <div class="schedules_aside_item"><p class="schedules_aside_time">17:00</p></div>
+      <div class="schedules_aside_item"><p class="schedules_aside_time">18:00</p></div>
+    </aside>
+
+    <div class="schedules_main">
+      <input id="tab_1" type="radio" name="tab-group" checked="checked" />
+      <label for="tab_1" class="schedules_tab __tab_a">トラックA</label>
+      <input id="tab_2" type="radio" name="tab-group" />
+      <label for="tab_2" class="schedules_tab __tab_b">トラックB</label>
+
+      <div class="schedules_wrapper">
+        <div id="sche_a" class="schedules_a">
+          <article class="schedules_main_item __a_item __a_01">
+            <div class="schedules_main_item_header">
+              <p class="schedules_main_item_header_time">13:45 - 14:00</p>
+            </div>
+            <div class="schedules_main_item_body">
+              <figure class="schedules_main_item_body_thm">
+                <img src="{{ '/assets/kaigi01/thm_schedule01.jpg?v=' | append: site.github.build_revision | relative_url }}" alt="">
+              </figure>
+              <div class="schedules_main_item_body_txt">
+                <div class="tag_talk">heisei talk</div>
+                <p>fuqda</p>
+                <h4>OSS初心者がつまづきながらOSSマナーを学んでいく話初心者がつまづきながらOSSマナーを学んでいく話</h4>
+              </div>
+            </div>
+          </article><!--CALENDAR CARD-->
+          <article class="schedules_main_item __a_item __a_02">
+            <div class="schedules_main_item_header">
+              <p class="schedules_main_item_header_time">14:05 - 14:20</p>
+            </div>
+            <div class="schedules_main_item_body">
+              <figure class="schedules_main_item_body_thm">
+                <img src="{{ '/assets/kaigi01/thm_schedule02.jpg?v=' | append: site.github.build_revision | relative_url }}" alt="">
+              </figure>
+              <div class="schedules_main_item_body_txt">
+                <div class="tag_talk">heisei talk</div>
+                <p>fuqda</p>
+                <h4>OSS初心者がつまづきながらOSSマナーを学んでいく</h4>
+              </div>
+            </div>
+          </article><!--CALENDAR CARD-->
+          <article class="schedules_main_item __a_item __a_03">
+            <div class="schedules_main_item_header">
+              <p class="schedules_main_item_header_time">14:25 - 14:40</p>
+            </div>
+            <div class="schedules_main_item_body">
+              <figure class="schedules_main_item_body_thm">
+                <img src="{{ '/assets/kaigi01/thm_schedule02.jpg?v=' | append: site.github.build_revision | relative_url }}" alt="">
+              </figure>
+              <div class="schedules_main_item_body_txt">
+                <div class="tag_talk">heisei talk</div>
+                <p>fuqda</p>
+                <h4>OSS初心者がつまづきながらOSSマナーを学んでいく</h4>
+              </div>
+            </div>
+          </article><!--CALENDAR CARD-->
+          <article class="schedules_main_item __a_item __a_04">
+            <div class="schedules_main_item_header">
+              <p class="schedules_main_item_header_time">14:45 - 15:00</p>
+            </div>
+            <div class="schedules_main_item_body">
+              <figure class="schedules_main_item_body_thm">
+                <img src="{{ '/assets/kaigi01/thm_schedule02.jpg?v=' | append: site.github.build_revision | relative_url }}" alt="">
+              </figure>
+              <div class="schedules_main_item_body_txt">
+                <div class="tag_talk">heisei talk</div>
+                <p>fuqda</p>
+                <h4>OSS初心者がつまづきながらOSSマナーを学んでいく</h4>
+              </div>
+            </div>
+          </article><!--CALENDAR CARD-->
+          <article class="schedules_main_item __a_item __a_05">
+            <div class="schedules_main_item_header">
+              <p class="schedules_main_item_header_time">15:05 - 15:20</p>
+            </div>
+            <div class="schedules_main_item_body">
+              <figure class="schedules_main_item_body_thm">
+                <img src="{{ '/assets/kaigi01/thm_schedule02.jpg?v=' | append: site.github.build_revision | relative_url }}" alt="">
+              </figure>
+              <div class="schedules_main_item_body_txt">
+                <div class="tag_talk">heisei talk</div>
+                <p>fuqda</p>
+                <h4>OSS初心者がつまづきながらOSSマナーを学んでいく</h4>
+              </div>
+            </div>
+          </article><!--CALENDAR CARD-->
+          <article class="schedules_main_item __a_item __a_06">
+            <div class="schedules_main_item_header">
+              <p class="schedules_main_item_header_time">15:25 - 16:15</p>
+            </div>
+            <div class="schedules_main_item_body">
+              <figure class="schedules_main_item_body_thm">
+                <img src="{{ '/assets/kaigi01/thm_schedule02.jpg?v=' | append: site.github.build_revision | relative_url }}" alt="">
+              </figure>
+              <div class="schedules_main_item_body_txt">
+                <div class="tag_proposal">proposal</div>
+                <p>fuqda</p>
+                <h4>モブプロ</h4>
+              </div>
+            </div>
+          </article><!--CALENDAR CARD-->
+          <article class="schedules_main_item __a_item __a_07">
+            <div class="schedules_main_item_header">
+              <p class="schedules_main_item_header_time">16:20 - 16:35</p>
+            </div>
+            <div class="schedules_main_item_body">
+              <figure class="schedules_main_item_body_thm">
+                <img src="{{ '/assets/kaigi01/thm_schedule02.jpg?v=' | append: site.github.build_revision | relative_url }}" alt="">
+              </figure>
+              <div class="schedules_main_item_body_txt">
+                <div class="tag_talk">heisei talk</div>
+                <p>fuqda</p>
+                <h4>OSS初心者がつまづきながらOSSマナーを学んでいく</h4>
+              </div>
+            </div>
+          </article><!--CALENDAR CARD-->
+          <article class="schedules_main_item __a_item __a_08">
+            <div class="schedules_main_item_header">
+              <p class="schedules_main_item_header_time">16:40 - 16:55</p>
+            </div>
+            <div class="schedules_main_item_body">
+              <figure class="schedules_main_item_body_thm">
+                <img src="{{ '/assets/kaigi01/thm_schedule02.jpg?v=' | append: site.github.build_revision | relative_url }}" alt="">
+              </figure>
+              <div class="schedules_main_item_body_txt">
+                <div class="tag_talk">heisei talk</div>
+                <p>fuqda</p>
+                <h4>OSS初心者がつまづきながらOSSマナーを学んでいく</h4>
+              </div>
+            </div>
+          </article><!--CALENDAR CARD-->
+          <article class="schedules_main_item __a_item __a_09">
+            <div class="schedules_main_item_header">
+              <p class="schedules_main_item_header_time">17:00 - 17:15</p>
+            </div>
+            <div class="schedules_main_item_body">
+              <figure class="schedules_main_item_body_thm">
+                <img src="{{ '/assets/kaigi01/thm_schedule02.jpg?v=' | append: site.github.build_revision | relative_url }}" alt="">
+              </figure>
+              <div class="schedules_main_item_body_txt">
+                <div class="tag_talk">heisei talk</div>
+                <p>fuqda</p>
+                <h4>OSS初心者がつまづきながらOSSマナーを学んでいく</h4>
+              </div>
+            </div>
+          </article><!--CALENDAR CARD-->
+          <article class="schedules_main_item __a_item __a_10">
+            <div class="schedules_main_item_header">
+              <p class="schedules_main_item_header_time">17:20 - 17:35</p>
+            </div>
+            <div class="schedules_main_item_body">
+              <figure class="schedules_main_item_body_thm">
+                <img src="{{ '/assets/kaigi01/thm_schedule02.jpg?v=' | append: site.github.build_revision | relative_url }}" alt="">
+              </figure>
+              <div class="schedules_main_item_body_txt">
+                <div class="tag_talk">heisei talk</div>
+                <p>fuqda</p>
+                <h4>OSS初心者がつまづきながらOSSマナーを学んでいく</h4>
+              </div>
+            </div>
+          </article><!--CALENDAR CARD-->
+        </div>
+
+        <div id="sche_b" class="schedules_b">
+          <article class="schedules_main_item __b_item __b_01">
+            <div class="schedules_main_item_header">
+              <p class="schedules_main_item_header_time">13:45 - 14:00</p>
+            </div>
+            <div class="schedules_main_item_body">
+              <figure class="schedules_main_item_body_thm">
+                <img src="{{ '/assets/kaigi01/thm_schedule01.jpg?v=' | append: site.github.build_revision | relative_url }}" alt="">
+              </figure>
+              <div class="schedules_main_item_body_txt">
+                <div class="tag_talk">heisei talk</div>
+                <p>fuqda</p>
+                <h4>OSS初心者がつまづきながらOSSマナーを学んでいく話初心者がつまづきながらOSSマナーを学んでいく話</h4>
+              </div>
+            </div>
+          </article><!--CALENDAR CARD-->
+          <article class="schedules_main_item __b_item __b_02">
+            <div class="schedules_main_item_header">
+              <p class="schedules_main_item_header_time">14:05 - 14:20</p>
+            </div>
+            <div class="schedules_main_item_body">
+              <figure class="schedules_main_item_body_thm">
+                <img src="{{ '/assets/kaigi01/thm_schedule02.jpg?v=' | append: site.github.build_revision | relative_url }}" alt="">
+              </figure>
+              <div class="schedules_main_item_body_txt">
+                <div class="tag_talk">heisei talk</div>
+                <p>fuqda</p>
+                <h4>OSS初心者がつまづきながらOSSマナーを学んでいく</h4>
+              </div>
+            </div>
+          </article><!--CALENDAR CARD-->
+          <article class="schedules_main_item __b_item __b_03">
+            <div class="schedules_main_item_header">
+              <p class="schedules_main_item_header_time">14:05 - 14:20</p>
+            </div>
+            <div class="schedules_main_item_body">
+              <figure class="schedules_main_item_body_thm">
+                <img src="{{ '/assets/kaigi01/thm_schedule02.jpg?v=' | append: site.github.build_revision | relative_url }}" alt="">
+              </figure>
+              <div class="schedules_main_item_body_txt">
+                <div class="tag_talk">heisei talk</div>
+                <p>fuqda</p>
+                <h4>OSS初心者がつまづきながらOSSマナーを学んでいく</h4>
+              </div>
+            </div>
+          </article><!--CALENDAR CARD-->
+          <article class="schedules_main_item __b_item __b_04">
+            <div class="schedules_main_item_header">
+              <p class="schedules_main_item_header_time">14:05 - 14:20</p>
+            </div>
+            <div class="schedules_main_item_body">
+              <figure class="schedules_main_item_body_thm">
+                <img src="{{ '/assets/kaigi01/thm_schedule02.jpg?v=' | append: site.github.build_revision | relative_url }}" alt="">
+              </figure>
+              <div class="schedules_main_item_body_txt">
+                <div class="tag_talk">heisei talk</div>
+                <p>fuqda</p>
+                <h4>OSS初心者がつまづきながらOSSマナーを学んでいく</h4>
+              </div>
+            </div>
+          </article><!--CALENDAR CARD-->
+          <article class="schedules_main_item __b_item __b_05">
+            <div class="schedules_main_item_header">
+              <p class="schedules_main_item_header_time">14:05 - 14:20</p>
+            </div>
+            <div class="schedules_main_item_body">
+              <figure class="schedules_main_item_body_thm">
+                <img src="{{ '/assets/kaigi01/thm_schedule02.jpg?v=' | append: site.github.build_revision | relative_url }}" alt="">
+              </figure>
+              <div class="schedules_main_item_body_txt">
+                <div class="tag_talk">heisei talk</div>
+                <p>fuqda</p>
+                <h4>OSS初心者がつまづきながらOSSマナーを学んでいく</h4>
+              </div>
+            </div>
+          </article><!--CALENDAR CARD-->
+          <article class="schedules_main_item __b_item __b_06">
+            <div class="schedules_main_item_header">
+              <p class="schedules_main_item_header_time">15:25 - 16:15</p>
+            </div>
+            <div class="schedules_main_item_body">
+              <figure class="schedules_main_item_body_thm">
+                <img src="{{ '/assets/kaigi01/thm_schedule02.jpg?v=' | append: site.github.build_revision | relative_url }}" alt="">
+              </figure>
+              <div class="schedules_main_item_body_txt">
+                <div class="tag_proposal">proposal</div>
+                <p>fuqda</p>
+                <h4>平成.rb過去問</h4>
+              </div>
+            </div>
+          </article><!--CALENDAR CARD-->
+          <article class="schedules_main_item __b_item __b_07">
+            <div class="schedules_main_item_header">
+              <p class="schedules_main_item_header_time">16:20 - 16:35</p>
+            </div>
+            <div class="schedules_main_item_body">
+              <figure class="schedules_main_item_body_thm">
+                <img src="{{ '/assets/kaigi01/thm_schedule02.jpg?v=' | append: site.github.build_revision | relative_url }}" alt="">
+              </figure>
+              <div class="schedules_main_item_body_txt">
+                <div class="tag_talk">heisei talk</div>
+                <p>fuqda</p>
+                <h4>OSS初心者がつまづきながらOSSマナーを学んでいく</h4>
+              </div>
+            </div>
+          </article><!--CALENDAR CARD-->
+          <article class="schedules_main_item __b_item __b_08">
+            <div class="schedules_main_item_header">
+              <p class="schedules_main_item_header_time">16:40 - 16:55</p>
+            </div>
+            <div class="schedules_main_item_body">
+              <figure class="schedules_main_item_body_thm">
+                <img src="{{ '/assets/kaigi01/thm_schedule02.jpg?v=' | append: site.github.build_revision | relative_url }}" alt="">
+              </figure>
+              <div class="schedules_main_item_body_txt">
+                <div class="tag_talk">heisei talk</div>
+                <p>fuqda</p>
+                <h4>OSS初心者がつまづきながらOSSマナーを学んでいく</h4>
+              </div>
+            </div>
+          </article><!--CALENDAR CARD-->
+          <article class="schedules_main_item __b_item __b_09">
+            <div class="schedules_main_item_header">
+              <p class="schedules_main_item_header_time">17:00 - 17:15</p>
+            </div>
+            <div class="schedules_main_item_body">
+              <figure class="schedules_main_item_body_thm">
+                <img src="{{ '/assets/kaigi01/thm_schedule02.jpg?v=' | append: site.github.build_revision | relative_url }}" alt="">
+              </figure>
+              <div class="schedules_main_item_body_txt">
+                <div class="tag_talk">heisei talk</div>
+                <p>fuqda</p>
+                <h4>OSS初心者がつまづきながらOSSマナーを学んでいく</h4>
+              </div>
+            </div>
+          </article><!--CALENDAR CARD-->
+          <article class="schedules_main_item __b_item __b_10">
+            <div class="schedules_main_item_header">
+              <p class="schedules_main_item_header_time">17:20 - 17:35</p>
+            </div>
+            <div class="schedules_main_item_body">
+              <figure class="schedules_main_item_body_thm">
+                <img src="{{ '/assets/kaigi01/thm_schedule02.jpg?v=' | append: site.github.build_revision | relative_url }}" alt="">
+              </figure>
+              <div class="schedules_main_item_body_txt">
+                <div class="tag_talk">heisei talk</div>
+                <p>fuqda</p>
+                <h4>OSS初心者がつまづきながらOSSマナーを学んでいく</h4>
+              </div>
+            </div>
+          </article><!--CALENDAR CARD-->
+        </div>
+
+        <article class="schedules_main_item __long_item __long_01">
+          <div class="schedules_main_item_header">
+            <p class="schedules_main_item_header_time">12:50 - 13:00</p>
+            <p class="schedules_main_item_header_txt">O.A 平成.rbってなに？</p>
+          </div>
+        </article><!--calender card-->
+        <article class="schedules_main_item __long_item __long_02">
+          <div class="schedules_main_item_header">
+            <p class="schedules_main_item_header_time">13:00 - 13:30</p>
+          </div>
+          <div class="schedules_main_item_body">
+            <figure class="schedules_main_item_body_thm">
+              <img src="{{ '/assets/kaigi01/thm_schedule01.jpg?v=' | append: site.github.build_revision | relative_url }}" alt="">
+            </figure>
+            <div class="schedules_main_item_body_txt">
+              <div class="tag_keynote">keynote</div>
+              <p>Junichi Ito</p>
+              <h4>KeynoteタイトルKeynoteタイトル</h4>
+            </div>
+          </div>
+        </article><!--calender card-->
+        <article class="schedules_main_item __long_item __long_03">
+          <div class="schedules_main_item_header">
+            <p class="schedules_main_item_header_time">17:50 - 18:35</p>
+          </div>
+          <div class="schedules_main_item_body">
+            <figure class="schedules_main_item_body_thm">
+              <img src="{{ '/assets/kaigi01/thm_schedule01.jpg?v=' | append: site.github.build_revision | relative_url }}" alt="">
+            </figure>
+            <div class="schedules_main_item_body_txt">
+              <div class="tag_pr">PR</div>
+              <p>スポンサー各位</p>
+              <h4>KeynoteタイトルKeynoteタイトル</h4>
+            </div>
+          </div>
+        </article><!--calender card-->
+        <article class="schedules_main_item __long_item __long_04">
+          <div class="schedules_main_item_header">
+            <p class="schedules_main_item_header_time">18:35 - 18:40</p>
+            <div class="tag_pr">PR</div>
+            <p class="schedules_main_item_header_txt">飛込み01</p>
+          </div>
+        </article><!--calender card-->
+        <article class="schedules_main_item __long_item __long_05">
+          <div class="schedules_main_item_header">
+            <p class="schedules_main_item_header_time">18:40 - 18:45</p>
+            <div class="tag_pr">PR</div>
+            <p class="schedules_main_item_header_txt">飛込み02</p>
+          </div>
+        </article><!--calender card-->
+        <article class="schedules_main_item __long_item __long_06">
+          <div class="schedules_main_item_header">
+            <p class="schedules_main_item_header_time">18:45 - 19:15</p>
+          </div>
+          <div class="schedules_main_item_body">
+            <figure class="schedules_main_item_body_thm">
+              <img src="{{ '/assets/kaigi01/thm_schedule01.jpg?v=' | append: site.github.build_revision | relative_url }}" alt="">
+            </figure>
+            <div class="schedules_main_item_body_txt">
+              <div class="tag_keynote">keynote</div>
+              <p>Junichi Ito</p>
+              <h4>KeynoteタイトルKeynoteタイトル</h4>
+            </div>
+          </div>
+        </article><!--calender card-->
+        <article class="schedules_main_item __long_item __long_07">
+          <div class="schedules_main_item_header">
+            <p class="schedules_main_item_header_time">19:30 - 21:30</p>
+            <p class="schedules_main_item_header_txt">懇親会</p>
+          </div>
+          <div class="schedules_main_item_body"></div>
+        </article><!--calender card-->
+      </div>
+    </div><!--schedules_main-->
+  </div><!--schedules_cont-->
+</section>
+
+
+<section id="spns" class="spns container">
+  <h2 class="ttl_main">Sponsors</h2>
+  <div class="spns_col spns_col_2">
+    <div class="spns_item tag_venueSpns">
+      <figure class="spns_thm">
+        <img src="{{ '/assets/kaigi01/logo_sponsers01.jpg?v=' | append: site.github.build_revision | relative_url }}" alt="DRECOM">
+      </figure>
+      <a class="spns_txt" href="">株式会社 ドリコム</a>
+    </div><!--.spns_item-->
+    <div class="spns_item tag_creativeSpns">
+      <figure class="spns_thm">
+        <img src="{{ '/assets/kaigi01/logo_stores.svg?v=' | append: site.github.build_revision | relative_url }}" alt="DRECOM">
+      </figure>
+      <a class="spns_txt" href="">ストアーズ・ドット・ジェーピー 株式会社</a>
+    </div><!--.spns_item-->
+  </div>
+  <div class="spns_col spns_col_3">
+    <div class="spns_item tag_venueSpns">
+      <figure class="spns_thm">
+        <img src="{{ '/assets/kaigi01/logo_sponsers01.jpg?v=' | append: site.github.build_revision | relative_url }}" alt="DRECOM">
+      </figure>
+      <a class="spns_txt" href="">株式会社 ドリコム</a>
+    </div><!--.spns_item-->
+    <div class="spns_item">
+      <figure class="spns_thm">
+        <img src="{{ '/assets/kaigi01/logo_sponsers01.jpg?v=' | append: site.github.build_revision | relative_url }}" alt="DRECOM">
+      </figure>
+      <a class="spns_txt" href="">株式会社 ドリコム</a>
+    </div><!--.spns_item-->
+    <div class="spns_item">
+      <figure class="spns_thm">
+        <img src="{{ '/assets/kaigi01/logo_stores.svg?v=' | append: site.github.build_revision | relative_url }}" alt="DRECOM">
+      </figure>
+      <a class="spns_txt" href="">ストアーズ・ドット・ジェーピー 株式会社</a>
+    </div><!--.spns_item-->
+    <div class="spns_item">
+      <figure class="spns_thm">
+        <img src="{{ '/assets/kaigi01/logo_stores.svg?v=' | append: site.github.build_revision | relative_url }}" alt="DRECOM">
+      </figure>
+      <a class="spns_txt" href="">ストアーズ・ドット・ジェーピー 株式会社</a>
+    </div><!--.spns_item-->
+    <div class="spns_item">
+      <figure class="spns_thm">
+        <img src="{{ '/assets/kaigi01/logo_stores.svg?v=' | append: site.github.build_revision | relative_url }}" alt="DRECOM">
+      </figure>
+      <a class="spns_txt" href="">ストアーズ・ドット・ジェーピー 株式会社</a>
+    </div><!--.spns_item-->
+  </div>
+  <div class="btn_main">
+    <a href="">become a sponsor</a>
+  </div>
+</section>
+
+
+<section id="organizers" class="organizers container">
+  <h2 class="ttl_main">Heisei.rb Organizers</h2>
+  <div class="organizers_col">
+    <div class="organizers_item">
+      <figure class="organizers_thm">
+        <img src="{{ '/assets/kaigi01/thm_organizers01.jpg?v=' | append: site.github.build_revision | relative_url }}" alt="STORES.jp">
+      </figure>
+      <p class="organizers_txt"><a href="">@tashiro_rb</a></p>
+    </div><!-- .organizers_item -->
+    <div class="organizers_item">
+      <figure class="organizers_thm">
+        <img src="{{ '/assets/kaigi01/thm_organizers01.jpg?v=' | append: site.github.build_revision | relative_url }}" alt="STORES.jp">
+      </figure>
+      <p class="organizers_txt"><a href="">@tashiro_rb</a></p>
+    </div><!-- .organizers_item -->
+    <div class="organizers_item">
+      <figure class="organizers_thm">
+        <img src="{{ '/assets/kaigi01/thm_organizers01.jpg?v=' | append: site.github.build_revision | relative_url }}" alt="STORES.jp">
+      </figure>
+      <p class="organizers_txt"><a href="">@tashiro_rb</a></p>
+    </div><!-- .organizers_item -->
+    <div class="organizers_item">
+      <figure class="organizers_thm">
+        <img src="{{ '/assets/kaigi01/thm_organizers01.jpg?v=' | append: site.github.build_revision | relative_url }}" alt="STORES.jp">
+      </figure>
+      <p class="organizers_txt"><a href="">@tashiro_rb</a></p>
+    </div><!-- .organizers_item -->
+    <div class="organizers_item">
+      <figure class="organizers_thm">
+        <img src="{{ '/assets/kaigi01/thm_organizers01.jpg?v=' | append: site.github.build_revision | relative_url }}" alt="STORES.jp">
+      </figure>
+      <p class="organizers_txt"><a href="">@tashiro_rb</a></p>
+    </div><!-- .organizers_item -->
+  </div>
+</section>
+
+
+<section class="stores">
+  <div class="stores_inner">
+    <div class="stores_ttl">クリエイティブスポンサー & PR by STORES.jp</div>
+    <h2><img class="stores_logo" src="{{ '/assets/kaigi01/logo_stores.svg?v=' | append: site.github.build_revision | relative_url }}" alt="STORES.jp"></h2>
+    <h3>Rubyエンジニアを募集しています！</h3>
+    <div class="btn_main">
+      <a href="">採用ページはこちら</a>
+    </div>
+    <div class="stores_col">
+      <div>
+        <a href="">
+          <figure class="stores_col_thm"><img src="{{ '/assets/kaigi01/thm_stores01.jpg?v=' | append: site.github.build_revision | relative_url }}" alt="STORES.jp"></figure>
+        </a>
+        <h4 class="stores_col_ttl">
+          Hello hey
+          <a class="btn_link" href=""><span></span><span></span></a>
+        </h4>
+        <p class="stores_col_txt">
+          毎週木曜日20:00〜行っている会社説明会です。
+          <br>目的は「heyを好きになってくれる人を増やすこと。」なので、とてもオープンにやってます。
+        </p>
+      </div>
+      <div>
+        <a href="">
+          <figure class="stores_col_thm">
+            <img src="{{ '/assets/kaigi01/thm_stores02.jpg?v=' | append: site.github.build_revision | relative_url }}" alt="STORES.jp">
+          </figure>
+        </a>
+        <h4 class="stores_col_ttl">
+          STORES.jp
+          <a class="btn_link" href=""><span></span><span></span></a>
+        </h4>
+        <p class="stores_col_txt">
+          誰でも簡単に本格的なネットショップが作成できるサービス
+          <br>「STORES.jp」を提供・開発しています。
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="back">
+    <span></span>
+    <span></span>
+  </div>
+  <div class="footer_inner container">
+    <div>
+      <div class="logo_s">
+        <a href="/kaigi01"><img src="{{ '/assets/kaigi01/logo_s.svg?v=' | append: site.github.build_revision | relative_url }}" alt="平成Ruby会議"></a>
+      </div>
+      <ul>
+        <li class="footer_txt_jp"><span>主催</span>平成.rb</li>
+        <li class="footer_txt_jp"><span>後援</span>日本Rubyの会</li>
+      </ul>
+    </div>
+    <div>
+      <p class="footer_txt_en">Copyright heisei.rb 2019, this website is licensed under a CC By 4.0</p>
+      <p class="footer_txt_en">creative sponsor by STORES.jp</p>
+    </div>
+  </div>
+</footer>
+
+
+<!-- scripts -->
+<script src="{{ '/assets/js/kaigi01.js?v=' | append: site.github.build_revision | relative_url }}"></script>
