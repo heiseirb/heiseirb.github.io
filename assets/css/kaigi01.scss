@@ -392,6 +392,15 @@ button {
   background-color: transparent;
 }
 
+// easy switch
+.pc { display: block;}
+.sp { display: none;}
+
+@media only screen and ( max-width: 768px ) {
+  .pc { display: none;}
+  .sp { display: block;}
+}
+
 
 /* ========================================================================== 
 /* MAIN
@@ -403,6 +412,16 @@ body {
   font-family: $txt_jp, $safeType_jp, $safeType_en;
 }
 
+
+main {
+  padding-top: 180px;
+  overflow: hidden;
+  @include mq (medium,max) {
+    padding-top: 120px;
+  }
+}
+
+
 .container {
   max-width: 1170px;
   width: 94%;
@@ -411,6 +430,7 @@ body {
     font-size: 3rem;
   }
 }
+
 
 .ttl {
   &_main {
@@ -426,6 +446,8 @@ body {
 }
 
 .bg_canvas {
+  width: 100%;
+  height: 100vh;
   position: fixed;
   z-index: -1;
 }
@@ -442,9 +464,12 @@ body {
     color: white;
     border-radius: 4px;
     border: 1px solid;
+    transition: all .2s ease;
   }
 
   &_wrapper {
+    position: static;
+    z-index: 3;
     @include flex(center, center);
     @include mq (medium,max) {
       width: 100%;
@@ -485,6 +510,10 @@ body {
         line-height: 66px;
         font-size: 1.6rem;
       }
+      &:hover {
+        transform: translate(5px,5px);
+        box-shadow: 5px 5px 0px 0px;
+      }
     }
   }
 
@@ -504,6 +533,10 @@ body {
         line-height: 66px;
         font-size: 1.6rem;
       }
+      &:hover {
+        transform: translate(5px,5px);
+        box-shadow: 5px 5px 0px 0px;
+      }
     }
   }
 
@@ -517,6 +550,10 @@ body {
       background: $red;
       border-color: #3a0000;
       box-shadow: 5px 5px 0px 0px #ec3f53;
+      &:hover {
+        transform: translate(2px,2px);
+        box-shadow: 3px 3px 0px 0px;
+      }
     }
   }
 
@@ -529,6 +566,7 @@ body {
     background: $light_blue;
     border-radius: 50%;
     border: 1px solid #3e4890;
+    transition: all .2s ease;
     @include mq (medium,max) {
       width: 32px;
       height: 32px;
@@ -563,6 +601,37 @@ body {
       }
     }
   }
+
+  &_comming {
+    position: relative;
+    a {
+      background: #f0f0f0;
+      color: #b5b5b5;
+      box-shadow: 10px 10px 0px 0px #d4d4d4;
+      pointer-events: none;
+    }
+
+    &:hover {
+      &::before {
+        animation: shake .5s 1 forwards ease;
+      }
+    }
+  }
+}
+
+@keyframes shake {
+    0% {
+      transform: rotate(9deg);
+    }
+    25% {
+      transform: rotate(1deg);
+    }
+    75% {
+      transform: rotate(11deg);
+    }
+    100% {
+      transform: rotate(9deg);
+    }
 }
 
 
@@ -658,19 +727,53 @@ body {
     @extend .tag_extend--schedules;
     background: #0370b6;
   }
+
+  &_comming {
+    position: relative;
+    &::before {
+      content: 'まもなく応募開始';
+      font-size: 1.6rem;
+      color: $red;
+      font-weight: 700;
+      letter-spacing: .1em;
+      position: absolute;
+      top: -6px;
+      right: -15px;
+      padding: 10px 18px 10px 50px;
+      transform: rotate(9deg);
+      background: {
+        color: white;
+        image: url('/assets/kaigi01/icon_comming.svg');
+        position: 10% 50%;
+        size: 22px 24px;
+        repeat: no-repeat;
+      }
+      border: 1px solid $black;
+      z-index: 3;
+
+      @include mq (medium,max) {
+        font-size: 1.1rem;
+        top: 0;
+        right: -18px;
+        padding: 10px 14px 10px 40px;
+        background: {
+          size: 15px 17px;
+        }
+      }
+    }
+  }
 }
 
 
 .keyVisual {
   padding: 35px;
-  margin-bottom: 160px;
   background: white;
   @include mq (medium,max) {
     padding: 18px;
-    margin-bottom: 80px;
   }
 
   &_inner {
+    overflow: hidden;
     position: relative;
     height: calc( 100vh - 70px );
     background: $light;
@@ -687,10 +790,174 @@ body {
   }
 }
 
+.circle {
+  &_01,&_02,&_03 {
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(-90deg, #fee6e9, #d5e4ff);
+    z-index: 1;
+    opacity: .45;
+  }
+
+  &_01 {
+    bottom: -70px;
+    left: -130px;
+    width: 600px;
+    height: 600px;
+  }
+
+  &_02 {
+    top: 42%;
+    left: 58%;
+    width: 200px;
+    height: 200px;
+  }
+
+  &_03 {
+    left: 39%;
+    top: 31%;
+    transform: translate(-50%,-50%);
+    width: 300px;
+    height: 300px;
+  }
+}
+
+
+.visual {
+  width: 100%;
+
+  &_logo {
+    z-index: 3;
+    @include center(both);
+    width: 670px;
+    top: 32%;
+
+    @include mq (medium,max) {
+      width: 92%;
+      top: 23%;
+    }
+  }
+
+  &_info {
+    position: absolute;
+    top: 44%;
+    left: 50%;
+    transform: translateX(-85%);
+    z-index: 3;
+
+    @include mq (medium,max) {
+      transform: scale(.75) translateX(-45%);
+      left: 30%;
+      top: 35%;
+    }
+
+    &_inner { position: relative;}
+
+    &_plate {
+      width: 436px;
+    }
+
+    &_01,&_02,&_03,&_04,&_map { position: absolute;}
+
+    &_01 {
+      font-family: $txt_en;
+      font-size: 4.8rem;
+      letter-spacing: -.02em;
+      font-style: italic;
+      font-weight: 700;
+      top: 20px;
+      left: 15px;
+      transform: rotate(-4deg);
+      
+      span {
+        padding-top: 4px;
+        font-size: 3rem;
+        vertical-align: top;
+        display: inline-block;
+        margin-left: 16px;
+      }
+    }
+
+    &_02 {
+      font-family: $txt_en;
+      font-size: 3.6rem;
+      font-style: italic;
+      letter-spacing: .02em;
+      font-weight: 700;
+      top: 70px;
+      left: 167px;
+      transform: rotate(-7deg);
+    }
+
+    &_03, &_04 {
+      font-size: 1.8rem;
+      font-family: $txt_jp;
+      font-style: italic;
+      letter-spacing: .05em;
+      font-weight: 700;
+    }
+
+    &_03 {
+      top: 135px;
+      left: 110px;
+      transform: rotate(-8deg);
+    }
+
+    &_04 {
+      top: 158px;
+      left: 107px;
+      transform: rotate(-10deg);
+    }
+
+    &_map {
+      width: 35px;
+      bottom: 65px;
+      right: 76px;
+      transform: rotate(4deg);
+      transition: all .2s ease;
+      &:hover {
+        transform: rotate(10deg) scale(1.03);
+        opacity: .8;
+      }
+    }
+  }
+
+  &_num {
+    width: 110px;
+    position: absolute;
+    top: 47%;
+    left: 50%;
+    transform: translateX(128%) rotate(-4deg);
+    z-index: 3;
+    @include mq (medium,max) {
+      width: 50px;
+      top: 32%;
+      right: 10%;
+    }
+  }
+
+  &_ruby {
+    @include center (both);
+    top: 40%;
+    z-index: 2;
+
+    @include mq (medium,max) {
+      top: 28%;
+      width: 94%;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
 
 .header {
   width: calc( 100% - 60px );
   margin: 0 auto;
+  @include mq (medium,max) {
+    display: none;
+  }
 
   &_inner {
     padding: 30px 0;
@@ -711,13 +978,31 @@ body {
     }
 
     &_item {
+      color: $black;
+      position: relative;
       margin-right: 50px;
       font-family: $txt_en;
       font-size: 1.5rem;
       letter-spacing: .03em;
       text-transform: capitalize;
+      cursor: pointer;
       &:last-child {
         margin-right: 0;
+      }
+      &:not(.btn_nav)::after {
+        content: '';
+        width: 0;
+        height: 2px;
+        background: $red;
+        display: block;
+        position: absolute;
+        bottom: -4px;
+        transition: all .2s ease;
+      }
+      &:hover {
+        &::after {
+          width: 100%;
+        }
       }
     }
   }
@@ -725,10 +1010,37 @@ body {
 
 
 .notice {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  @include mq (medium,max) {
+    right: 12px;
+    bottom: 12px;
+  }
+
+  &:hover {
+    & .notice_cont {
+      width: 425px;
+      opacity: 1;
+      visibility: visible;
+      @include mq (medium,max) {
+        width: 300px;
+      }
+    }
+    & .notice_txt {
+      opacity: 1;
+      visibility: visible;
+    }
+    & .notice_i {
+      background-color: #b8c9fd;
+      transform: scale(1.08) rotate(-8deg);
+    }
+  }
+
   &_i {
     position: absolute;
-    right: 20px;
-    bottom: 20px;
+    bottom: 0;
+    right: 0;
     width: 38px;
     height: 38px;
     color: white;
@@ -742,38 +1054,46 @@ body {
     border-radius: 50%;
     cursor: pointer;
     z-index: 1;
+    transition: all .15s ease-in;
     @include mq (medium,max) {
-      right: 12px;
-      bottom: 12px;
       width: 30px;
       height: 30px;
       line-height: 30px;
     }
+
   }
 
   &_cont {
+    opacity: 0;
+    visibility: hidden;
     position: absolute;
-    right: 20px;
-    bottom: 20px;
-    width: 425px;
+    bottom: 0;
+    right: 0;
+    width: 0;
     height: 40px;
     padding: 0 0 0 20px;
     border-radius: 20px;
     background: white;
+    transition: all .1s ease-in;
     @include mq (medium,max) {
-      width: 87%;
-      right: 12px;
-      bottom: 12px;
+      width: 78%;
       height: 32px;
     }
   }
 
   &_txt {
+    opacity: 0;
+    visibility: hidden;
     position: absolute;
-    font-size: 1.4rem;
+    bottom: 0;
+    right: 0;
+    width: 410px;
+    font-size: 1.35rem;
     line-height: 40px;
     letter-spacing: .05em;
+    transition: all .2s ease;
     @include mq (medium,max) {
+      width: 270px;
       font-size: 1rem;
       right: 38px;
       line-height: 32px;
@@ -782,9 +1102,20 @@ body {
 
   &_link {
     display: inline-block;
+    position: relative;
     margin: 0 2px;
     font-weight: bold;
     color: $light_blue;
+    &::after {
+      content: '';
+      @include center(horizontal);
+      display: block;
+      width: 100%;
+      height: 1px;
+      background-color: $light_blue;
+      bottom: 6px;
+      z-index: 2;
+    }
   }
 }
 
@@ -807,8 +1138,15 @@ body {
     a {
       display: inline-block;
       margin-right: 24px;
+      
       &:last-child {
         margin-right: 0;
+      }
+      & img {
+        transition: all .2s ease;
+        &:hover {
+          transform: translateY(-6px);
+        }
       }
     }
   }
@@ -868,6 +1206,7 @@ body {
 
 
 .speakers {
+  position: relative;
   margin-bottom: 150px;
   @include mq (medium,max) {
     margin-bottom: 80px;
@@ -906,6 +1245,11 @@ body {
 
   &_item {
     position: relative;
+    &:hover {
+      & > div > img {
+        transform: rotate(0deg) scale(.96) !important;
+      }
+    }
 
     p {
       position: relative;
@@ -953,17 +1297,48 @@ body {
     height: 300px;
     margin-bottom: 42px;
     z-index: 2;
+    transition: all .2s ease-out;
     @include mq (medium,max) {
       width: 200px;
       height: 200px;
       margin-bottom: 20px;
     }
   }
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 20000px;
+    height: 1200px;
+    background: #f7f8fc;
+    z-index: -1;
+    margin-left: -10000px; 
+    top: -80px;
+    transform: rotate(-15deg);
+
+    @include mq (medium,max) {
+      top: -200px;
+      height: 1000px;
+    }
+  }
 }
 
 
 .schedules {
+  position: relative;
   input { visibility: hidden;}
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 20000px;
+    height: 800px;
+    background: #f7f8fc;
+    z-index: -1;
+    margin-left: -10000px; 
+    bottom: 800px;
+    transform: rotate(-15deg);
+  }
 
   &_tab {
     position: absolute;
@@ -1008,6 +1383,17 @@ body {
 
   article {
     border-radius: 4px;
+  }
+
+  .breakline {
+    position: absolute;
+    right: calc( 50% - 2px );
+    width: 1px;
+    height: 3050px;
+    background: #d7d7d7;
+    @include mq (medium,max) {
+      display: none;
+    }
   }
 
   &_cont {
@@ -1274,9 +1660,15 @@ body {
       z-index: -100;
     }
 
-    &_main input#tab_1:checked + label,
+    &_main input#tab_1:checked + label {
+      opacity: 1;
+      box-shadow: 0px 0px 0px 0px #4f75ed;
+      transform: translate(3px,3px);
+    }
     &_main input#tab_2:checked + label {
       opacity: 1;
+      box-shadow: 0px 0px 0px 0px #da2037;
+      transform: translate(3px,3px);
     }
 
     &_main input#tab_1:checked ~ .schedules_wrapper .schedules_a,
@@ -1339,9 +1731,12 @@ body {
           margin: 0 10px 28px;
         }
       }
+
       .spns_txt {
-        font-size: 1.25rem;
-        font-weight: 300;
+        @include mq (medium,max) {
+          font-size: 1.25rem;
+          font-weight: 300;
+        }
       }
     }
   }
@@ -1385,10 +1780,10 @@ body {
   }
 
   .btn_main {
-   @include mq (medium,max) {
-     width: 80%;
-     margin: 0 auto;
-   } 
+    @include mq (medium,max) {
+      width: 80%;
+      margin: 0 auto;
+    } 
     a {
       display: block;
       margin: 0 auto;
@@ -1595,6 +1990,14 @@ body {
           margin-bottom: 24px;
         }
       }
+      &:hover {
+        & .btn_link {
+          transform: translate(5px,-50%);
+        }
+        & img {
+          transform: scale(1.03);
+        }
+      }
     }
 
     &_thm {
@@ -1619,6 +2022,7 @@ body {
         left: 0;
         bottom: 0;
         object-fit: cover;
+        transition: all .3s ease-out;
       }
     }
 
@@ -1739,8 +2143,13 @@ body {
     border-radius: 23px;
     background: $light_blue;
     border: 1px solid #3e4890;
+    cursor: pointer;
+    transition: all .2s ease;
     @include mq (medium,max) {
       right: 5vw;
+    }
+    &:hover {
+      transform: translateY(-5px);
     }
 
     span {
