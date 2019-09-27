@@ -40,7 +40,7 @@ function scrollToTop() {
 particlesJS("particles_js", {
     particles: {
         number: {
-            value: 40,
+            value: 30,
             density: { enable: true, value_area: 868.0624057955 }
         },
         color: { value: "#ff4158" },
@@ -74,7 +74,7 @@ particlesJS("particles_js", {
         },
         move: {
             enable: true,
-            speed: 7,
+            speed: 8,
             direction: "none",
             random: false,
             straight: false,
@@ -99,4 +99,15 @@ particlesJS("particles_js", {
         }
     },
     retina_detect: true
+});
+
+
+// parallax by rellax
+var rellax = new Rellax('.rellax', {
+    speed: -2,
+    center: false,
+    wrapper: null,
+    round: true,
+    vertical: true,
+    horizontal: false
 });

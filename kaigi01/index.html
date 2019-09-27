@@ -42,7 +42,7 @@ title: 平成Ruby会議 01
     <div class="visual">
       <div class="visual_inner">
         <figure class="visual_logo">
-          <svg viewBox="0 0 444.86 183.57">
+          <svg viewBox="0 0 444.86 183.57" class="rellax" data-rellax-speed="3">
             <defs>
               <style type="text/css">
                 .cls-1 {fill: #020410;}
@@ -78,7 +78,7 @@ title: 平成Ruby会議 01
           </svg>
         </figure>
         <div class="visual_info">
-          <div class="visual_info_inner">
+          <div class="visual_info_inner rellax" data-rellax-speed="1">
             <p class="visual_info_01">2019.12.14<span>sat.</span></p>
             <p class="visual_info_02">12:50-19:15</p>
             <p class="visual_info_03">株式会社ドリコム</p>
@@ -135,7 +135,7 @@ title: 平成Ruby会議 01
           </div>
         </div>
         <figure class="visual_num">
-          <svg viewBox="0 0 117.31 92.28">
+          <svg viewBox="0 0 117.31 92.28" class="rellax" data-rellax-speed="1">
             <defs>
               <style>
                 .svg_num_1 {fill: #111;}
@@ -155,7 +155,7 @@ title: 平成Ruby会議 01
           </svg>
         </figure>
         <figure class="visual_ruby">
-          <img src="{{ '/assets/kaigi01/v_ruby.png?v=' | append: site.github.build_revision | relative_url }}" alt="Ruby">
+          <img rellax" data-rellax-speed="-1" src="{{ '/assets/kaigi01/v_ruby.png?v=' | append: site.github.build_revision | relative_url }}" alt="Ruby">
         </figure>
       </div><!--.visual_inner-->
     </div>
@@ -177,8 +177,8 @@ title: 平成Ruby会議 01
       </p>
     </div>
 
-    <div class="circle_01"></div>
-    <div class="circle_02"></div>
+    <div class="circle_01 rellax" data-rellax-speed="2"></div>
+    <div class="circle_02 rellax" data-rellax-speed="-1"></div>
     <div class="circle_03"></div>
   </div><!--.keyVisual_inner-->
 </section>
@@ -210,7 +210,7 @@ title: 平成Ruby会議 01
 <section id="speakers" class="speakers container">
   <h2 class="ttl_main">Keynote Speakers</h2>
   <div class="speakers_wrapper">
-    <div class="speakers_item __item_01">
+    <div class="speakers_item __item_01 rellax" data-rellax-speed="2">
       <div><img class="speakers_thm" src="{{ '/assets/kaigi01/thm_speaker01.jpg?v=' | append: site.github.build_revision | relative_url }}" alt=""></div>
       <p>Junichi Ito</p>
       <div class="icon_wrapper">
@@ -218,7 +218,7 @@ title: 平成Ruby会議 01
         <a href="" target="_blank"><img class="icon_github" src="{{ '/assets/kaigi01/icon_github.svg?v=' | append: site.github.build_revision | relative_url }}" alt="github"></a>
       </div>
     </div>
-    <div class="speakers_item __item_02">
+    <div class="speakers_item __item_02 rellax" data-rellax-speed="1">
       <div><img class="speakers_thm" src="{{ '/assets/kaigi01/thm_speaker02.jpg?v=' | append: site.github.build_revision | relative_url }}" alt=""></div>
       <p>fuqda</p>
       <div class="icon_wrapper">
@@ -732,6 +732,8 @@ title: 平成Ruby会議 01
 
 
 <section class="stores">
+  <div class="stores_pttn01 rellax" data-rellax-speed="1"></div>
+  <div class="stores_pttn02 rellax" data-rellax-speed="1"></div>
   <div class="stores_inner">
     <div class="stores_ttl">クリエイティブスポンサー & PR by STORES.jp</div>
     <h2><img class="stores_logo" src="{{ '/assets/kaigi01/logo_stores.svg?v=' | append: site.github.build_revision | relative_url }}" alt="STORES.jp"></h2>
@@ -799,4 +801,5 @@ title: 平成Ruby会議 01
 <!-- scripts -->
 <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> <!-- stats.js lib -->
 <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
+<script src="{{ '/assets/js/vendor/rellax.js?v=' | append: site.github.build_revision | relative_url }}"></script>
 <script src="{{ '/assets/js/kaigi01.js?v=' | append: site.github.build_revision | relative_url }}"></script>

@@ -859,7 +859,7 @@ main {
   }
 
   &_02 {
-    top: 42%;
+    top: 44%;
     left: 58%;
     width: 200px;
     height: 200px;
@@ -1284,7 +1284,7 @@ main {
 
 .speakers {
   position: relative;
-  margin-bottom: 150px;
+  margin-bottom: 40px;
   @include mq (medium,max) {
     margin-bottom: 80px;
   }
@@ -1323,6 +1323,7 @@ main {
       }
       
       &:first-child {
+        margin-top: 100px;
         margin-left: 0;
         margin-bottom: 40px;
       }
@@ -2048,15 +2049,12 @@ main {
     margin-bottom: 90px;
   }
 
-  &::before, &::after {
+  &_pttn01, &_pttn02 {
     position: absolute;
-    content: '';
     display: block;
     width: 300px;
     height: 460px;
     background: {
-      image: url('/assets/kaigi01/pattern_stores.svg');
-      position: right;
       size: cover;
       repeat: no-repeat;
     }
@@ -2066,18 +2064,26 @@ main {
     }
   }
 
-  &::before {
-    top: -135px;
+  &_pttn01 {
+    top: 220px;
     left: -20px;
+    background: {
+      image: url('/assets/kaigi01/pattern_stores01.svg');
+      position: right;
+    }
     @include mq (medium,max) {
       top: -130px;
       left: -150px;
     }
   }
 
-  &::after {
-    top: -100px;
+  &_pttn02 {
+    top: 240px;
     right: -100px;
+    background: {
+      image: url('/assets/kaigi01/pattern_stores02.svg');
+      position: left;
+    }
     transform: rotate(180deg);
     @include mq (medium,max) {
       top: -180px;
