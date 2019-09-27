@@ -1286,7 +1286,7 @@ main {
   position: relative;
   margin-bottom: 0;
   @include mq (medium,max) {
-    margin-bottom: 20px;
+    margin-bottom: 0;
   }
 
   .ttl_main {
@@ -1326,7 +1326,6 @@ main {
         margin-top: 160px;
         margin-left: 0;
         margin-bottom: 40px;
-
         @include mq (medium,max) {
           margin-top: 200px;
         }
@@ -1334,6 +1333,9 @@ main {
       &:last-child {
         margin-top: 40px;
         margin-right: 0;
+        @include mq (medium,max) {
+          margin-top: -80px;
+        }
       }
     }
   }
@@ -2045,9 +2047,9 @@ main {
   margin: 0 auto 150px;
   width: 98%;
   padding: 0 0 70px;
-  overflow: hidden;
   border-radius: 20px;
   box-shadow: 0 8px 16px rgba(0,0,0,.12);
+  overflow: hidden;
   @include mq (medium,max) {
     width: 94%;
     padding-bottom: 40px;
@@ -2063,6 +2065,7 @@ main {
       size: cover;
       repeat: no-repeat;
     }
+    z-index: -1;
     @include mq (medium,max) {
       width: 200px;
       height: 320px;
@@ -2099,6 +2102,8 @@ main {
   &_inner {
     position: relative;
     z-index: 2;
+    border-radius: 20px 20px 0 0;
+    overflow: hidden;
   }
 
   &_ttl {
@@ -2110,6 +2115,7 @@ main {
     letter-spacing: .05em;
     text-align: center;
     background: #007c6b;
+    z-index: 5;
     @include mq (medium,max) {
       font-size: 1.4rem;
       padding: 18px 0;
