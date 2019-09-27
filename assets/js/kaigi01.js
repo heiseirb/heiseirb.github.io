@@ -79,7 +79,8 @@ particlesJS("particles_js", {
         line_linked: {
             enable: true,
             distance: 150,
-            color: "#ffffff",
+            // color: "#ea6a7a",
+            color: "#f2c1c7",
             opacity: 1,
             width: 2
         },
