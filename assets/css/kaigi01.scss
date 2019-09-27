@@ -422,6 +422,61 @@ main {
 }
 
 
+.bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  &_filter {
+    opacity: .95;
+    z-index: 2;
+    background:
+    {
+        image: url('/assets/kaigi01/noise.png');
+        repeat: repeat;
+    };
+    animation: 1s infinite noise;
+  }
+
+  &_gradient {
+    animation: bgGradient 15s linear infinite;
+    opacity: .95;
+    background: linear-gradient(
+        -30deg,
+        white,
+        #f1f4ff,
+        #fff1f5
+    );
+    background-size: 400% 400%;
+  }
+
+  &_particle {
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@keyframes noise {
+    0%, 100% { background-position: 0 0;}
+    10% { background-position: -5% -10%;}
+    20% { background-position: -15% 5%;}
+    30% { background-position: 7% -25%;}
+    40% { background-position: 20% 25%;}
+    50% { background-position: -25% 10%;}
+    60% { background-position: 15% 5%;}
+    70% { background-position: 0% 15%;}
+    80% { background-position: 25% 35%;}
+    90% { background-position: -10% 10%;}
+}
+
+@keyframes bgGradient {
+    0% { background-position: 0 100%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 100%; }
+}
+
+
 .container {
   max-width: 1170px;
   width: 94%;
@@ -570,6 +625,9 @@ main {
     @include mq (medium,max) {
       width: 32px;
       height: 32px;
+    }
+    &:hover {
+      background-color: #b8c9fd;
     }
 
     span {
@@ -969,6 +1027,8 @@ main {
   }
 
   &_nav {
+    position: static;
+    z-index: 4;
     @include flex();
     @include mq (medium,max) {
       display: none;
@@ -1014,6 +1074,7 @@ main {
   position: absolute;
   right: 20px;
   bottom: 20px;
+  z-index: 4;
   @include mq (medium,max) {
     right: 12px;
     bottom: 12px;
@@ -1123,6 +1184,9 @@ main {
 
 .logo {
   &_s {
+    position: static;
+    z-index: 4;
+
     img {
       display: block;
       width: 188px;
@@ -1919,7 +1983,7 @@ main {
     }
 
     &::before {
-      background-color: #ff5268;
+      background-color: #ff5066;
       display: block;
       position: absolute;
       content: '';
@@ -2246,11 +2310,12 @@ main {
     background: $light_blue;
     border: 1px solid #3e4890;
     cursor: pointer;
-    transition: all .2s ease;
+    transition: all .25s ease;
     @include mq (medium,max) {
       right: 5vw;
     }
     &:hover {
+      background-color: #b8c9fd;
       transform: translateY(-5px);
     }
 
