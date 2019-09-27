@@ -3,14 +3,14 @@
 
 // smooth scroll to div from header
 window.smoothScroll = function (target) {
-    var scrollContainer = target;
+    let scrollContainer = target;
     do {
         scrollContainer = scrollContainer.parentNode;
         if (!scrollContainer) return;
         scrollContainer.scrollTop += 1;
     } while (scrollContainer.scrollTop == 0);
 
-    var targetY = 0;
+    let targetY = 0;
     do {
         if (target == scrollContainer) break;
         targetY += target.offsetTop;
@@ -40,7 +40,7 @@ function scrollToTop() {
 particlesJS("particles_js", {
     particles: {
         number: {
-            value: 38,
+            value: 40,
             density: { enable: true, value_area: 868.0624057955 }
         },
         color: { value: "#ff4158" },
@@ -66,15 +66,15 @@ particlesJS("particles_js", {
             }
         },
         line_linked: {
-            enable: false,
+            enable: true,
             distance: 150,
             color: "#ffffff",
             opacity: 1,
-            width: 1
+            width: 2
         },
         move: {
             enable: true,
-            speed: 6,
+            speed: 7,
             direction: "none",
             random: false,
             straight: false,
@@ -87,17 +87,16 @@ particlesJS("particles_js", {
         detect_on: "canvas",
         events: {
             onhover: { enable: true, mode: "repulse" },
-            onclick: { enable: true, mode: "push" },
+            onclick: { enable: false, mode: "push" },
             resize: true
         },
         modes: {
             grab: { distance: 400, line_linked: { opacity: 1 } },
             bubble: { distance: 400, size: 40, duration: 2, opacity: 8, speed: 3 },
             repulse: { distance: 200, duration: 0.4 },
-            push: { particles_nb: 4 },
+            push: { particles_nb: 3 },
             remove: { particles_nb: 2 }
         }
     },
     retina_detect: true
 });
-requestAnimationFrame(update);

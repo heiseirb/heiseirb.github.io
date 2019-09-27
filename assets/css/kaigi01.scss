@@ -432,8 +432,8 @@ main {
     z-index: 2;
     background:
     {
-        image: url('/assets/kaigi01/noise.png');
-        repeat: repeat;
+      image: url('/assets/kaigi01/noise.png');
+      repeat: repeat;
     };
     animation: 1s infinite noise;
   }
@@ -442,10 +442,10 @@ main {
     animation: bgGradient 15s linear infinite;
     opacity: .95;
     background: linear-gradient(
-        -30deg,
-        white,
-        #f1f4ff,
-        #fff1f5
+      -30deg,
+      white,
+      #f1f4ff,
+      #fff1f5
     );
     background-size: 400% 400%;
   }
@@ -498,13 +498,6 @@ main {
       text-align: center;
     }
   }
-}
-
-.bg_canvas {
-  width: 100%;
-  height: 100vh;
-  position: fixed;
-  z-index: -1;
 }
 
 
@@ -1238,6 +1231,7 @@ main {
 
 
 .about {
+  position: relative;
   margin-bottom: 210px;
   @include mq (medium,max) {
     margin-bottom: 100px;
@@ -1816,6 +1810,7 @@ main {
 
 
 .spns {
+  position: relative;
   margin-bottom: 135px;
   @include mq (medium,max) {
     margin-bottom: 80px;
@@ -2339,78 +2334,101 @@ main {
   }
 }
 
-// @function multiple-box-shadow ($n) {
-//   $value: '#{random(2000)}px #{random(2000)}px #ff556a';
-//   @for $i from 2 through $n {
-//     $value: '#{$value} , #{random(2000)}px #{random(2000)}px #ff556a';
-//   }
+.shape {
+  position: absolute;
+  height: auto;
+  &::before {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: block;
+  }
+  
+  &_01 {
+    top: -100px;
+    left: 40%;
+    width: 20px;
+    opacity: .55;
+    transform: rotate(50deg);
+    &::before {
+      content: url('/assets/kaigi01/shape_blue01.svg');
+    }
+  }
+  
+  &_02 {
+    bottom: -20px;
+    left: 10%;
+    width: 12px;
+    opacity: .3;
+    transform: rotate(-20deg);
+    &::before {
+      content: url('/assets/kaigi01/shape_blue01.svg');
+    }
+  }
 
-//   @return unquote($value);
-// }
+  &_03 {
+    bottom: -20px;
+    right: 10%;
+    width: 24px;
+    opacity: .75;
+    transform: rotate(120deg);
+    &::before {
+      content: url('/assets/kaigi01/shape_red01.svg');
+    }
+  }
 
-// $shadows-small:  multiple-box-shadow(740);
-// $shadows-medium: multiple-box-shadow(240);
-// $shadows-big:    multiple-box-shadow(540);
+  &_04 {
+    top: 20px;
+    left: 33%;
+    width: 14px;
+    opacity: .55;
+    transform: rotate(20deg);
+    &::before {
+      content: url('/assets/kaigi01/shape_red01.svg');
+    }
+  }
 
-// #stars {
-//   width: 1px;
-//   height: 1px;
-//   background: transparent;
-//   box-shadow: $shadows-small;
-//   animation: animStar 50s linear infinite;
-    
-//   &::after {
-//     content: "";
-//     position: absolute;
-//     top: 2000px;
-//     width: 1px;
-//     height: 1px;
-//     background: transparent;
-//     box-shadow: $shadows-small;
-//   }
-// }
+  &_05 {
+    bottom: 10%;
+    left: 4%;
+    width: 10px;
+    opacity: .7;
+    transform: rotate(-60deg);
+    &::before {
+      content: url('/assets/kaigi01/shape_blue01.svg');
+    }
+  }
 
-// #stars2 {
-//   width: 2px;
-//   height: 2px;
-//   background: transparent;
-//   box-shadow: $shadows-medium;
-//   animation: animStar 100s linear infinite;
-    
-//   &::after {
-//     content: "";
-//     position: absolute;
-//     top: 2000px;
-//     width: 2px;
-//     height: 2px;
-//     background: transparent;
-//     box-shadow: $shadows-medium;
-//   }
-// }
+  &_06 {
+    top: 45%;
+    left: 0;
+    width: 16px;
+    opacity: .4;
+    transform: rotate(120deg);
+    &::before {
+      content: url('/assets/kaigi01/shape_blue01.svg');
+    }
+  }
 
-// #stars3 {
-//   width: 3px;
-//   height: 3px;
-//   background: transparent;
-//   box-shadow: $shadows-big;
-//   animation: animStar 20s linear infinite;
+  &_07 {
+    bottom: 10%;
+    right: 4%;
+    width: 10px;
+    opacity: .5;
+    transform: rotate(-60deg);
+    &::before {
+      content: url('/assets/kaigi01/shape_red01.svg');
+    }
+  }
 
-//   &::after {
-//     content: "";
-//     position: absolute;
-//     top: 2000px;
-//     width: 3px;
-//     height: 3px;
-//     background: transparent;
-//     box-shadow: $shadows-big;
-//   }
-// }
-
-// @keyframes animStar {
-//   from {
-//     transform: translateY(-2000px);
-//   }
-//   to {
-//     transform: translateY(0);
-//   }
-// }
+  &_08 {
+    bottom: 20%;
+    right: 4%;
+    width: 10px;
+    opacity: .5;
+    transform: rotate(20deg);
+    &::before {
+      content: url('/assets/kaigi01/shape_blue01.svg');
+    }
+  }
+}
