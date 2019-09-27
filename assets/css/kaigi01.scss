@@ -1284,9 +1284,9 @@ main {
 
 .speakers {
   position: relative;
-  margin-bottom: 40px;
+  margin-bottom: 0;
   @include mq (medium,max) {
-    margin-bottom: 80px;
+    margin-bottom: 20px;
   }
 
   .ttl_main {
@@ -1323,11 +1323,16 @@ main {
       }
       
       &:first-child {
-        margin-top: 100px;
+        margin-top: 160px;
         margin-left: 0;
         margin-bottom: 40px;
+
+        @include mq (medium,max) {
+          margin-top: 200px;
+        }
       }
       &:last-child {
+        margin-top: 40px;
         margin-right: 0;
       }
     }
@@ -2072,7 +2077,7 @@ main {
       position: right;
     }
     @include mq (medium,max) {
-      top: -130px;
+      top: 460px;
       left: -150px;
     }
   }
@@ -2086,7 +2091,7 @@ main {
     }
     transform: rotate(180deg);
     @include mq (medium,max) {
-      top: -180px;
+      top: 430px;
       right: -140px;
     }
   }
@@ -2240,7 +2245,7 @@ main {
   &_inner {
     padding: 90px 0 60px;
     @include mq (medium,max) {
-      padding: 64px 0 48px;
+      padding: 64px 0 34px;
     }
 
     & > div {
