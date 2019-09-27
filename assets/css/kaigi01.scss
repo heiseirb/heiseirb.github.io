@@ -1779,9 +1779,19 @@ main {
       }
     }
   }
+
+  .schedules_main {
+    .hiring {
+      h4 { 
+        color: $red;
+        font-size: 1.4rem;
+        letter-spacing: .08em;
+      }
+    }
+  }
 }
 
-// schedule tab
+// schedule tab 
 @include mq (medium,max) {
   .schedules {
     &_a, &_b {
