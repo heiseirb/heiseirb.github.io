@@ -2393,98 +2393,132 @@ main {
 .shape {
   position: absolute;
   height: auto;
-  &::before {
+  z-index: 1;
+
+  & > div {
     width: 100%;
     height: 100%;
     position: absolute;
     display: block;
+    background: {
+      position: center;
+      size: contain;
+      repeat: no-repeat;
+    }
   }
   
   &_01 {
-    top: -100px;
+    top: -50px;
     left: 40%;
-    width: 20px;
     opacity: .55;
     transform: rotate(50deg);
-    &::before {
-      content: url('/assets/kaigi01/shape_blue01.svg');
+    & > div {
+      width: 20px;
+      height: 20px;
+      background: {
+        image: url('/assets/kaigi01/shape_blue01.svg');
+      }
     }
   }
   
   &_02 {
-    bottom: -20px;
+    bottom: 0;
     left: 10%;
-    width: 12px;
     opacity: .3;
     transform: rotate(-20deg);
-    &::before {
-      content: url('/assets/kaigi01/shape_blue01.svg');
+    & > div {
+      width: 12px;
+      height: 12px;
+      background: {
+        image: url('/assets/kaigi01/shape_blue01.svg');
+      }
     }
   }
 
   &_03 {
-    bottom: -20px;
+    bottom: 0;
     right: 10%;
-    width: 24px;
     opacity: .75;
     transform: rotate(120deg);
-    &::before {
-      content: url('/assets/kaigi01/shape_red01.svg');
+    & > div {
+      width: 24px;
+      height: 24px;
+      background: {
+        image: url('/assets/kaigi01/shape_red01.svg');
+      }
     }
   }
 
   &_04 {
     top: 20px;
     left: 33%;
-    width: 14px;
     opacity: .55;
     transform: rotate(20deg);
-    &::before {
-      content: url('/assets/kaigi01/shape_red01.svg');
+    & > div {
+      width: 14px;
+      height: 14px;
+      background: {
+        image: url('/assets/kaigi01/shape_red01.svg');
+      }
     }
   }
 
   &_05 {
-    bottom: 10%;
+    bottom: 100px;
     left: 4%;
-    width: 10px;
-    opacity: .7;
+    opacity: .45;
     transform: rotate(-60deg);
-    &::before {
-      content: url('/assets/kaigi01/shape_blue01.svg');
+    & > div {
+      width: 16px;
+      height: 16px;
+      background: {
+        image: url('/assets/kaigi01/shape_blue01.svg');
+      }
     }
   }
 
   &_06 {
-    top: 45%;
+    top: 0;
     left: 0;
     width: 16px;
     opacity: .4;
     transform: rotate(120deg);
-    &::before {
-      content: url('/assets/kaigi01/shape_blue01.svg');
+    & > div {
+      width: 16px;
+      height: 16px;
+      background: {
+        image: url('/assets/kaigi01/shape_blue01.svg');
+      }
     }
   }
 
   &_07 {
-    bottom: 10%;
+    bottom: 0;
     right: 4%;
     width: 10px;
     opacity: .5;
     transform: rotate(-60deg);
-    &::before {
-      content: url('/assets/kaigi01/shape_red01.svg');
+    & > div {
+      width: 10px;
+      height: 10px;
+      background: {
+        image: url('/assets/kaigi01/shape_red01.svg');
+      }
     }
   }
 
   &_08 {
-    bottom: 20%;
+    bottom: 0;
     right: 4%;
     width: 10px;
     opacity: .5;
     transform: rotate(20deg);
-    &::before {
-      content: url('/assets/kaigi01/shape_blue01.svg');
+    & > div {
+      width: 10px;
+      height: 10px;
+      background: {
+        image: url('/assets/kaigi01/shape_blue01.svg');
+      }
     }
   }
 }
