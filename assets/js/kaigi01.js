@@ -1,6 +1,17 @@
 'use strict';
 
 
+// parallax by rellax
+var rellax = new Rellax('.rellax', {
+    speed: -2,
+    center: false,
+    wrapper: null,
+    round: true,
+    vertical: true,
+    horizontal: false
+});
+
+
 // smooth scroll to div from header
 window.smoothScroll = function (target) {
     let scrollContainer = target;
@@ -86,7 +97,7 @@ particlesJS("particles_js", {
     interactivity: {
         detect_on: "canvas",
         events: {
-            onhover: { enable: true, mode: "repulse" },
+            onhover: { enable: false, mode: "repulse" },
             onclick: { enable: false, mode: "push" },
             resize: true
         },
@@ -99,15 +110,4 @@ particlesJS("particles_js", {
         }
     },
     retina_detect: true
-});
-
-
-// parallax by rellax
-var rellax = new Rellax('.rellax', {
-    speed: -2,
-    center: false,
-    wrapper: null,
-    round: true,
-    vertical: true,
-    horizontal: false
 });

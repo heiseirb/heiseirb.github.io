@@ -1101,7 +1101,7 @@ main {
     color: white;
     font-family: $txt_en;
     font-size: 1.5rem;
-    font-weight: bold;
+    font-weight: 700;
     line-height: 38px;
     text-align: center;
     background: $light_blue;
@@ -1159,7 +1159,7 @@ main {
     display: inline-block;
     position: relative;
     margin: 0 2px;
-    font-weight: bold;
+    font-weight: 700;
     color: $light_blue;
     &::after {
       content: '';
@@ -1931,7 +1931,7 @@ main {
     font-size: 1.8rem;
     line-height: 1.4;
     letter-spacing: .05em;
-    font-weight: bold;
+    font-weight: 700;
     @include mq (medium,max) {
       font-size: 1.4rem;
     }
@@ -2106,7 +2106,7 @@ main {
     margin: 0 0 76px;
     padding: 22px 0;
     font-size: 1.8rem;
-    font-weight: bold;
+    font-weight: 700;
     letter-spacing: .05em;
     text-align: center;
     background: #007c6b;
@@ -2130,7 +2130,7 @@ main {
 
   h3 {
     font-size: 2.8rem;
-    font-weight: bold;
+    font-weight: 700;
     letter-spacing: .06em;
     line-height: 1.4;
     color: $red;
@@ -2211,7 +2211,7 @@ main {
     &_ttl {
       position: relative;
       font-size: 2.8rem;
-      font-weight: bold;
+      font-weight: 700;
       letter-spacing: .05em;
       margin-bottom: 24px;
       @include mq (medium,max) {
