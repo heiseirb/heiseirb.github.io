@@ -428,6 +428,7 @@ main {
   height: 100%;
 
   &_filter {
+    border-radius: 20px;
     opacity: .95;
     z-index: 2;
     background:
@@ -655,7 +656,6 @@ main {
 
   &_comming {
     position: relative;
-    pointer-events: none;
     a {
       background: #f0f0f0;
       color: #b5b5b5;
@@ -1030,6 +1030,9 @@ main {
 
     &_inner {
       @include flex();
+      .btn_comming {
+        pointer-events: none;
+      }
     }
 
     &_item {
@@ -1116,7 +1119,6 @@ main {
       height: 30px;
       line-height: 30px;
     }
-
   }
 
   &_cont {
@@ -1150,6 +1152,7 @@ main {
     letter-spacing: .05em;
     transition: all .2s ease;
     @include mq (medium,max) {
+      padding-right: 0;
       width: 270px;
       font-size: 1rem;
       right: 38px;
