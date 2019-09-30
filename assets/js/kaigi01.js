@@ -2,7 +2,7 @@
 
 
 // parallax by rellax
-var rellax = new Rellax('.rellax', {
+let rellax = new Rellax('.rellax', {
     speed: -2,
     center: false,
     wrapper: null,
