@@ -24,3 +24,7 @@ twitter:
   username: heiseirb
 
 # google_analytics: [Your Google Analytics tracking ID]
+
+livereload: true
+
+sass_dir: _sass
