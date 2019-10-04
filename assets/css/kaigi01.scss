@@ -5,7 +5,7 @@
 @charset 'UTF-8';
 
 
-/* ========================================================================== 
+/* ==========================================================================
 /* VARAIBLES
 /* ========================================================================== */
 
@@ -30,7 +30,7 @@ $trans: rgba(0,0,0,.25);
 $bgShadow: 0px 4px 12px rgba(0,0,0,.08);
 
 
-/* ========================================================================== 
+/* ==========================================================================
 /* MIXINS
 /* ========================================================================== */
 
@@ -134,7 +134,7 @@ $position: center, $size: cover, $repeat: no-repeat)
 }
 
 
-/* ========================================================================== 
+/* ==========================================================================
 /* RESET　
 /* ========================================================================== */
 
@@ -402,7 +402,7 @@ button {
 }
 
 
-/* ========================================================================== 
+/* ==========================================================================
 /* MAIN
 /* ========================================================================== */
 
@@ -780,6 +780,11 @@ main {
     background: #0370b6;
   }
 
+  &_lt {
+    @extend .tag_extend--schedules;
+    background: #11b99b;
+  }
+
   &_comming {
     position: relative;
     &::before {
@@ -921,7 +926,7 @@ main {
       top: 20px;
       left: 15px;
       transform: rotate(-4deg);
-      
+
       span {
         padding-top: 4px;
         font-size: 3rem;
@@ -1197,11 +1202,11 @@ main {
 .icon {
   &_wrapper {
     @include flex(center, flex-start);
-    
+
     a {
       display: inline-block;
       margin-right: 24px;
-      
+
       &:last-child {
         margin-right: 0;
       }
@@ -1320,13 +1325,13 @@ main {
     @include mq (medium,max) {
       flex-direction: column;
     }
-    
+
     & > div {
       margin: 0 95px;
       @include mq (medium,max) {
         margin: 0;
       }
-      
+
       &:first-child {
         margin-top: 160px;
         margin-left: 0;
@@ -1440,7 +1445,7 @@ main {
     height: 1200px;
     background: #f7f8fc;
     z-index: -1;
-    margin-left: -10000px; 
+    margin-left: -10000px;
     top: -80px;
     transform: rotate(-15deg);
 
@@ -1463,7 +1468,7 @@ main {
     height: 800px;
     background: #f7f8fc;
     z-index: -1;
-    margin-left: -10000px; 
+    margin-left: -10000px;
     bottom: 800px;
     transform: rotate(-15deg);
   }
@@ -1502,7 +1507,7 @@ main {
       z-index: 2;
     }
   }
-  .__tab_a { 
+  .__tab_a {
     color: #99a8eb;
     left: 17%;
     @include mq (medium,max) {
@@ -1557,7 +1562,7 @@ main {
 
     &_item {
       padding-left: 40px;
-      height: 450px; //タイムコマ高さ 
+      height: 450px; //タイムコマ高さ
       border-bottom: 1px solid $grey;
       @include mq (medium,max) {
         padding-left: 0;
@@ -1570,7 +1575,7 @@ main {
     &_time {
       font-family: $txt_en;
       font-size: 1.6rem;
-      line-height: 450px; //タイムコマ高さ 
+      line-height: 450px; //タイムコマ高さ
       font-weight: 700;
       color: #ff9595;
       @include mq (medium,max) {
@@ -1676,7 +1681,7 @@ main {
 
     &_item {
       width: 100%;
-      
+
       &_header {
         @include flex(center,flex-start);
         padding: 9px 0 9px 14px;
@@ -1704,7 +1709,7 @@ main {
           }
         }
 
-        .tag_pr,.tag_talk,.tag_keynote,.tag_proposal {
+        .tag_pr,.tag_lt,.tag_talk,.tag_keynote,.tag_proposal {
           margin-bottom: 0;
         }
       }
@@ -1808,7 +1813,7 @@ main {
 
   .schedules_main {
     .__hiring {
-      h4 { 
+      h4 {
         color: $red;
         font-size: 1.4rem;
         letter-spacing: .08em;
@@ -1817,7 +1822,7 @@ main {
   }
 }
 
-// schedule tab 
+// schedule tab
 @include mq (medium,max) {
   .schedules {
     &_a, &_b {
@@ -1998,7 +2003,7 @@ main {
     @include mq (medium,max) {
       width: 80%;
       margin: 0 auto;
-    } 
+    }
     a {
       display: block;
       margin: 0 auto;
@@ -2473,7 +2478,7 @@ main {
       repeat: no-repeat;
     }
   }
-  
+
   &_01 {
     top: -50px;
     left: 40%;
@@ -2487,7 +2492,7 @@ main {
       }
     }
   }
-  
+
   &_02 {
     bottom: 0;
     left: 10%;
