@@ -839,13 +839,14 @@ main {
       height: 2px;
       background: $light_blue;
       left: 50%;
+      animation: fadedown 1.8s infinite forwards ease;
     }
 
     &::before {
-      transform: rotate(-135deg) translateX(calc(50% - 1px));
+      transform: rotate(-140deg) translateX(calc(50% - 1px));
     }
     &::after {
-      transform: rotate(-45deg) translateX(calc(50% - 1px));
+      transform: rotate(-40deg) translateX(calc(50% - 1px));
     }
   }
 
@@ -867,9 +868,23 @@ main {
 
     @include mq (medium,max) {
       position: relative;
-      margin: 16px auto 80px;
+      margin: 0 auto 75px;
       bottom: 0;
     }
+  }
+}
+
+@keyframes fadedown {
+  0% {
+    background: white;
+    bottom: -4px;
+  }
+  30% {
+    background: $light_blue;    
+  }
+  100% {
+    background: white;
+    bottom: -12px;
   }
 }
 
