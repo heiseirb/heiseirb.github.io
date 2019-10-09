@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    {% include google_analytics.html %}
+    <meta charset="UTF-8">
+    {% seo %}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#82191e">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+  </head>
+  <body>
+    <main id="content" class="main-content" role="main">
+      {{ content }}
+
+      <footer class="site-footer">
+        このポリシーは <a href="https://ja.confcodeofconduct.com/" target="_blank">Conference Code of Conduct</a> をベースに作成されました。
+      </footer>
+    </main>
+  </body>
+</html>
