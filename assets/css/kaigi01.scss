@@ -1886,6 +1886,13 @@ main {
         flex-direction: column;
       }
 
+      .spns_item:nth-child(2) {
+        .spns_thm {
+          img {
+            margin-left: 16%;
+          }
+        }
+      }
       .spns_item {
         width: 40.5%;
         margin: 0 24px;
@@ -2185,8 +2192,8 @@ main {
 
   &_logo {
     display: block;
-    width: 214px;
-    height: 41px;
+    width: 304px;
+    height: auto;
     margin: 0 auto 34px;
     @include mq (medium,max) {
       width: 180px;
