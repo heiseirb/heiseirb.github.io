@@ -925,7 +925,7 @@ main {
   width: 100%;
 
   @include mq (medium,max) {
-    margin-top: 100px;
+    margin-top: 60px;
   }
 
   &_logo {
@@ -953,15 +953,22 @@ main {
     @include mq (medium,max) {
       position: relative;
       margin: 20px auto 0;
-      transform: scale(.7) translateX(-85%);
-      // left: 30%;
-      // top: 35%;
+      transform: scale(.72) translateX(-85%);
     }
 
-    &_inner { position: relative;}
+    &_inner { 
+      position: relative;
+
+      & > p {
+        z-index: 4;
+      }
+    }
 
     &_plate {
       width: 436px;
+      @include mq (medium,max) {
+        position: relative;
+      }
     }
 
     &_01,&_02,&_03,&_04,&_map { position: absolute;}
@@ -1031,7 +1038,7 @@ main {
         opacity: .8;
       }
       @include mq (medium,max) {
-        right: -10px;
+        right: 17%;
       }
     }
   }
@@ -1045,8 +1052,8 @@ main {
     z-index: 3;
     @include mq (medium,max) {
       width: 50px;
-      top: 32%;
-      right: 10%;
+      top: 29%;
+      left: 56%;
     }
   }
 
