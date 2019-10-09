@@ -826,8 +826,27 @@ main {
   position: relative;
   padding: 35px;
   background: white;
+
   @include mq (medium,max) {
     padding: 18px;
+
+    &::before, &::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      display: block;
+      width: 9px;
+      height: 2px;
+      background: $light_blue;
+      left: 50%;
+    }
+
+    &::before {
+      transform: rotate(-135deg) translateX(calc(50% - 1px));
+    }
+    &::after {
+      transform: rotate(-45deg) translateX(calc(50% - 1px));
+    }
   }
 
   &_inner {
@@ -837,13 +856,19 @@ main {
     background: $light;
     border-radius: 20px;
     box-sizing: border-box;
+    @include mq (medium,max) {
+      height: auto;
+    }
   }
 
   .btn_wrapper {
     @include center(horizontal);
     bottom: 120px;
+
     @include mq (medium,max) {
-      bottom: 80px;
+      position: relative;
+      margin: 16px auto 80px;
+      bottom: 0;
     }
   }
 }
@@ -884,6 +909,10 @@ main {
 .visual {
   width: 100%;
 
+  @include mq (medium,max) {
+    margin-top: 100px;
+  }
+
   &_logo {
     z-index: 3;
     @include center(both);
@@ -892,7 +921,10 @@ main {
 
     @include mq (medium,max) {
       width: 92%;
-      top: 23%;
+      position: relative;
+      margin: 0 auto;
+      transform: translate(0);
+      left: 0;
     }
   }
 
@@ -904,9 +936,11 @@ main {
     z-index: 3;
 
     @include mq (medium,max) {
-      transform: scale(.75) translateX(-45%);
-      left: 30%;
-      top: 35%;
+      position: relative;
+      margin: 20px auto 0;
+      transform: scale(.7) translateX(-85%);
+      // left: 30%;
+      // top: 35%;
     }
 
     &_inner { position: relative;}
@@ -926,6 +960,7 @@ main {
       top: 20px;
       left: 15px;
       transform: rotate(-4deg);
+      white-space: nowrap;
 
       span {
         padding-top: 4px;
@@ -945,6 +980,7 @@ main {
       top: 70px;
       left: 167px;
       transform: rotate(-7deg);
+      white-space: nowrap;
     }
 
     &_03, &_04 {
@@ -953,6 +989,7 @@ main {
       font-style: italic;
       letter-spacing: .05em;
       font-weight: 700;
+      white-space: nowrap;
     }
 
     &_03 {
@@ -968,6 +1005,7 @@ main {
     }
 
     &_map {
+      position: absolute;
       width: 35px;
       bottom: 65px;
       right: 76px;
@@ -976,6 +1014,9 @@ main {
       &:hover {
         transform: rotate(10deg) scale(1.03);
         opacity: .8;
+      }
+      @include mq (medium,max) {
+        right: -10px;
       }
     }
   }
@@ -1139,8 +1180,10 @@ main {
     background: white;
     transition: all .1s ease-in;
     @include mq (medium,max) {
-      width: 78%;
+      width: 300px;
       height: 32px;
+      opacity: 1;
+      visibility: visible;
     }
   }
 
@@ -1154,9 +1197,13 @@ main {
     padding: 0 8px 0 0;
     font-size: 1.35rem;
     line-height: 40px;
-    letter-spacing: .05em;
+    letter-spacing: .03em;
     transition: all .2s ease;
+    white-space: nowrap;
+
     @include mq (medium,max) {
+      opacity: 1;
+      visibility: visible;
       padding-right: 0;
       width: 270px;
       font-size: 1rem;
@@ -2205,7 +2252,7 @@ main {
     height: auto;
     margin: 0 auto 34px;
     @include mq (medium,max) {
-      width: 180px;
+      width: 220px;
       margin-bottom: 24px;
     }
   }
