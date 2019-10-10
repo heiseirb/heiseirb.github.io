@@ -1136,6 +1136,8 @@ main {
     transition: all .2s ease;
     white-space: nowrap;
     @include mq (medium,max) {
+      opacity: 1;
+      visibility: visible;
       padding-right: 0;
       width: 270px;
       font-size: 1rem;
