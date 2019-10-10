@@ -1145,25 +1145,6 @@ main {
     bottom: 12px;
   }
 
-  &:hover {
-    & .notice_cont {
-      width: 425px;
-      opacity: 1;
-      visibility: visible;
-      @include mq (medium,max) {
-        width: 300px;
-      }
-    }
-    & .notice_txt {
-      opacity: 1;
-      visibility: visible;
-    }
-    & .notice_i {
-      background-color: #b8c9fd;
-      transform: scale(1.08) rotate(-8deg);
-    }
-  }
-
   &_i {
     position: absolute;
     bottom: 0;
@@ -1176,12 +1157,12 @@ main {
     font-weight: 700;
     line-height: 38px;
     text-align: center;
-    background: $light_blue;
     border: 1px solid #3e4890;
     border-radius: 50%;
     cursor: pointer;
     z-index: 1;
-    transition: all .15s ease-in;
+    background-color: #b8c9fd;
+    transform: scale(1.08) rotate(-8deg);
     @include mq (medium,max) {
       width: 30px;
       height: 30px;
@@ -1190,8 +1171,6 @@ main {
   }
 
   &_cont {
-    opacity: 0;
-    visibility: hidden;
     position: absolute;
     bottom: 0;
     right: 0;
@@ -1201,6 +1180,7 @@ main {
     border-radius: 20px;
     background: white;
     transition: all .1s ease-in;
+    width: 425px;
     @include mq (medium,max) {
       width: 300px;
       height: 32px;
@@ -1210,8 +1190,6 @@ main {
   }
 
   &_txt {
-    opacity: 0;
-    visibility: hidden;
     position: absolute;
     bottom: 0;
     right: 0;
@@ -1222,7 +1200,7 @@ main {
     letter-spacing: .03em;
     transition: all .2s ease;
     white-space: nowrap;
-
+    
     @include mq (medium,max) {
       opacity: 1;
       visibility: visible;
