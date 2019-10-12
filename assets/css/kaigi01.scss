@@ -826,8 +826,28 @@ main {
   position: relative;
   padding: 35px;
   background: white;
+
   @include mq (medium,max) {
     padding: 18px;
+
+    &::before, &::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      display: block;
+      width: 9px;
+      height: 2px;
+      background: $light_blue;
+      left: 50%;
+      animation: fadedown 1.8s infinite forwards ease;
+    }
+
+    &::before {
+      transform: rotate(-140deg) translateX(calc(50% - 1px));
+    }
+    &::after {
+      transform: rotate(-40deg) translateX(calc(50% - 1px));
+    }
   }
 
   &_inner {
@@ -837,14 +857,34 @@ main {
     background: $light;
     border-radius: 20px;
     box-sizing: border-box;
+    @include mq (medium,max) {
+      height: auto;
+    }
   }
 
   .btn_wrapper {
     @include center(horizontal);
     bottom: 120px;
+
     @include mq (medium,max) {
-      bottom: 80px;
+      position: relative;
+      margin: 0 auto 75px;
+      bottom: 0;
     }
+  }
+}
+
+@keyframes fadedown {
+  0% {
+    background: white;
+    bottom: -4px;
+  }
+  30% {
+    background: $light_blue;    
+  }
+  100% {
+    background: white;
+    bottom: -12px;
   }
 }
 
@@ -884,6 +924,10 @@ main {
 .visual {
   width: 100%;
 
+  @include mq (medium,max) {
+    margin-top: 60px;
+  }
+
   &_logo {
     z-index: 3;
     @include center(both);
@@ -892,7 +936,10 @@ main {
 
     @include mq (medium,max) {
       width: 92%;
-      top: 23%;
+      position: relative;
+      margin: 0 auto;
+      transform: translate(0);
+      left: 0;
     }
   }
 
@@ -904,15 +951,24 @@ main {
     z-index: 3;
 
     @include mq (medium,max) {
-      transform: scale(.75) translateX(-45%);
-      left: 30%;
-      top: 35%;
+      position: relative;
+      margin: 20px auto 0;
+      transform: scale(.72) translateX(-85%);
     }
 
-    &_inner { position: relative;}
+    &_inner { 
+      position: relative;
+
+      & > p {
+        z-index: 4;
+      }
+    }
 
     &_plate {
       width: 436px;
+      @include mq (medium,max) {
+        position: relative;
+      }
     }
 
     &_01,&_02,&_03,&_04,&_map { position: absolute;}
@@ -926,6 +982,7 @@ main {
       top: 20px;
       left: 15px;
       transform: rotate(-4deg);
+      white-space: nowrap;
 
       span {
         padding-top: 4px;
@@ -945,6 +1002,7 @@ main {
       top: 70px;
       left: 167px;
       transform: rotate(-7deg);
+      white-space: nowrap;
     }
 
     &_03, &_04 {
@@ -953,6 +1011,7 @@ main {
       font-style: italic;
       letter-spacing: .05em;
       font-weight: 700;
+      white-space: nowrap;
     }
 
     &_03 {
@@ -968,6 +1027,7 @@ main {
     }
 
     &_map {
+      position: absolute;
       width: 35px;
       bottom: 65px;
       right: 76px;
@@ -976,6 +1036,9 @@ main {
       &:hover {
         transform: rotate(10deg) scale(1.03);
         opacity: .8;
+      }
+      @include mq (medium,max) {
+        right: 17%;
       }
     }
   }
@@ -989,8 +1052,8 @@ main {
     z-index: 3;
     @include mq (medium,max) {
       width: 50px;
-      top: 32%;
-      right: 10%;
+      top: 29%;
+      left: 56%;
     }
   }
 
@@ -1082,25 +1145,6 @@ main {
     bottom: 12px;
   }
 
-  &:hover {
-    & .notice_cont {
-      width: 425px;
-      opacity: 1;
-      visibility: visible;
-      @include mq (medium,max) {
-        width: 300px;
-      }
-    }
-    & .notice_txt {
-      opacity: 1;
-      visibility: visible;
-    }
-    & .notice_i {
-      background-color: #b8c9fd;
-      transform: scale(1.08) rotate(-8deg);
-    }
-  }
-
   &_i {
     position: absolute;
     bottom: 0;
@@ -1113,12 +1157,12 @@ main {
     font-weight: 700;
     line-height: 38px;
     text-align: center;
-    background: $light_blue;
     border: 1px solid #3e4890;
     border-radius: 50%;
     cursor: pointer;
     z-index: 1;
-    transition: all .15s ease-in;
+    background-color: #b8c9fd;
+    transform: scale(1.08) rotate(-8deg);
     @include mq (medium,max) {
       width: 30px;
       height: 30px;
@@ -1127,8 +1171,6 @@ main {
   }
 
   &_cont {
-    opacity: 0;
-    visibility: hidden;
     position: absolute;
     bottom: 0;
     right: 0;
@@ -1138,15 +1180,16 @@ main {
     border-radius: 20px;
     background: white;
     transition: all .1s ease-in;
+    width: 425px;
     @include mq (medium,max) {
-      width: 78%;
+      width: 300px;
       height: 32px;
+      opacity: 1;
+      visibility: visible;
     }
   }
 
   &_txt {
-    opacity: 0;
-    visibility: hidden;
     position: absolute;
     bottom: 0;
     right: 0;
@@ -1154,9 +1197,13 @@ main {
     padding: 0 8px 0 0;
     font-size: 1.35rem;
     line-height: 40px;
-    letter-spacing: .05em;
+    letter-spacing: .03em;
     transition: all .2s ease;
+    white-space: nowrap;
+    
     @include mq (medium,max) {
+      opacity: 1;
+      visibility: visible;
       padding-right: 0;
       width: 270px;
       font-size: 1rem;
@@ -1884,6 +1931,22 @@ main {
       margin-bottom: 80px;
       @include mq (medium,max) {
         flex-direction: column;
+        margin-bottom: 32px;
+      }
+
+      .spns_item:nth-child(2) {
+        .spns_thm {
+          img {
+            margin-left: 16%;
+            @include mq (medium,max) {
+              margin-left: auto;
+            }
+          }
+        }
+      }
+
+      .spns_txt {
+        white-space: nowrap;
       }
 
       .spns_item {
@@ -1903,7 +1966,7 @@ main {
       flex-wrap: wrap;
       margin: 0 -20px 40px;
       @include mq (medium,max) {
-        margin: 0 auto 24px;
+        margin: 0 auto 16px;
       }
 
       .spns_item {
@@ -1911,7 +1974,7 @@ main {
         margin: 0 22px 40px;
         @include mq (medium,max) {
           width: 41%;
-          margin: 0 10px 28px;
+          margin: 0 10px 16px;
         }
       }
 
@@ -1940,6 +2003,10 @@ main {
         letter-spacing: .05em;
         white-space: nowrap;
         z-index: 2;
+
+        @include mq (medium,max) {
+          font-size: 1.4rem;
+        }
       }
 
       &::after {
@@ -2185,11 +2252,11 @@ main {
 
   &_logo {
     display: block;
-    width: 214px;
-    height: 41px;
+    width: 304px;
+    height: auto;
     margin: 0 auto 34px;
     @include mq (medium,max) {
-      width: 180px;
+      width: 220px;
       margin-bottom: 24px;
     }
   }
