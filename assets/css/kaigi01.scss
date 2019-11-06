@@ -1993,7 +1993,7 @@ main {
       overflow: hidden;
 
       &::before {
-        content: 'スポンサー募集中';
+        content: 'スポンサー選考中';
         @include center (both);
         color: $red;
         text-align: center;
