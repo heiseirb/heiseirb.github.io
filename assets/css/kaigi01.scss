@@ -1666,21 +1666,21 @@ main {
         height: 188px;
       }
     }
-    .__long_03 { top: 2300px;
+    .__long_03 { top: 2390px;
       .schedules_main_item_body {
         height: 308px;
       }
     }
-    .__long_04 { top: 2648px;}
-    .__long_05 { top: 2697px;}
-    .__long_06 { top: 2746px;
+    .__long_04 { top: 2740px;}
+    .__long_05 { top: 2789px;}
+    .__long_06 { top: 2839px;
       .schedules_main_item_body {
         height: 140px;
       }
     }
-    .__long_07 { top: 3026px;
+    .__long_07 { top: 3045px;
       @include mq (medium,max) {
-        top: 2986px;
+        top: 3018px;
       }
       .schedules_main_item_body {
         height: 120px;
@@ -1725,6 +1725,7 @@ main {
     .__a_08,.__b_08 { top: 1781px;}
     .__a_09,.__b_09 { top: 1934px;}
     .__a_10,.__b_10 { top: 2090px;}
+    .__a_11,.__b_11 { top: 2246px;}
 
     &_item {
       width: 100%;
@@ -1992,7 +1993,7 @@ main {
       overflow: hidden;
 
       &::before {
-        content: 'スポンサー募集中';
+        content: 'スポンサー選考中';
         @include center (both);
         color: $red;
         text-align: center;
