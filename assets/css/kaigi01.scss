@@ -709,12 +709,13 @@ main {
 
   &_extend--schedules {
     display: inline-block;
-    margin: 2px 15px 10px 0;
-    width: 98px;
-    height: 25px;
+    margin: 2px 15px 4px 0;
+    padding: 0 6px;
+    min-width: 80px;
+    height: 20px;
     border-radius: 12.5px;
-    font-size: 1.2rem;
-    line-height: 24px;
+    font-size: 1.15rem;
+    line-height: 20px;
     color: white;
     font-family: $txt_en;
     text-transform: capitalize;
@@ -722,9 +723,9 @@ main {
     text-align: center;
     @include mq (medium,max) {
       vertical-align: top;
-      width: 86px;
-      height: 22px;
-      line-height: 22px;
+      min-width: 74px;
+      height: 18px;
+      line-height: 18px;
       font-size: 1.1rem;
       margin: 0 10px 0 0;
     }
@@ -1664,11 +1665,11 @@ main {
       }
     }
 
-    .__a_01,.__b_01 { top: 441px;}
-    .__a_02,.__b_02 { top: 591px;}
-    .__a_03,.__b_03 { top: 741px;}
-    .__a_04,.__b_04 { top: 892px;}
-    .__a_05,.__b_05 { top: 1045px;}
+    .__a_01,.__b_01 { top: 447px;}
+    .__a_02,.__b_02 { top: 597px;}
+    .__a_03,.__b_03 { top: 747px;}
+    .__a_04,.__b_04 { top: 898px;}
+    .__a_05,.__b_05 { top: 1047px;}
     .__a_06,.__b_06 { top: 1200px;
       .schedules_main_item_body {
         height: 374px;
@@ -1678,6 +1679,20 @@ main {
     .__a_08,.__b_08 { top: 1781px;}
     .__a_09,.__b_09 { top: 1934px;}
     .__a_10,.__b_10 { top: 2090px;}
+
+    .__3lines {
+      h4 {
+        font-size: 1.15rem;
+        letter-spacing: .04em;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;  
+        @include mq (medium,max) {
+          font-size: 1.1rem;
+        }
+      }
+    }
 
     &_item {
       width: 100%;
@@ -1755,6 +1770,8 @@ main {
             letter-spacing: .03em;
             @include mq (medium,max) {
               font-size: 1.2rem;
+              margin-top: -12px;
+              line-height: 1.35;
             }
           }
         }
