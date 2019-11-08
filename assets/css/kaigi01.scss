@@ -881,7 +881,7 @@ main {
     bottom: -4px;
   }
   30% {
-    background: $light_blue;    
+    background: $light_blue;
   }
   100% {
     background: white;
@@ -957,7 +957,7 @@ main {
       transform: scale(.72) translateX(-85%);
     }
 
-    &_inner { 
+    &_inner {
       position: relative;
 
       & > p {
@@ -1201,7 +1201,7 @@ main {
     letter-spacing: .03em;
     transition: all .2s ease;
     white-space: nowrap;
-    
+
     @include mq (medium,max) {
       opacity: 1;
       visibility: visible;
@@ -1735,7 +1735,7 @@ main {
         overflow: hidden;
         display: -webkit-box;
         -webkit-line-clamp: 3;
-        -webkit-box-orient: vertical;  
+        -webkit-box-orient: vertical;
         @include mq (medium,max) {
           font-size: 1.1rem;
         }
@@ -1990,6 +1990,30 @@ main {
       .spns_item {
         width: 28%;
         margin: 0 22px 40px;
+        @include mq (medium,max) {
+          width: 41%;
+          margin: 0 10px 16px;
+        }
+      }
+
+      .spns_txt {
+        @include mq (medium,max) {
+          font-size: 1.25rem;
+          font-weight: 300;
+        }
+      }
+    }
+
+    &_4 {
+      flex-wrap: wrap;
+      margin: 0 -20px 40px;
+      @include mq (medium,max) {
+        margin: 0 auto 16px;
+      }
+
+      .spns_item {
+        width: 22%;
+        margin: 0 11px 22px;
         @include mq (medium,max) {
           width: 41%;
           margin: 0 10px 16px;
