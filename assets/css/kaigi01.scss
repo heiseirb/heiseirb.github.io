@@ -1717,9 +1717,19 @@ main {
     .__a_03,.__b_03 { top: 747px;}
     .__a_04,.__b_04 { top: 898px;}
     .__a_05,.__b_05 { top: 1047px;}
-    .__a_06,.__b_06 { top: 1200px;
+    .__a_06 { top: 1200px;
       .schedules_main_item_body {
         height: 374px;
+      }
+    }
+    .__b_06 { top: 1200px;
+      .schedules_main_item_body {
+        height: 97px;
+      }
+    }
+    .__b_06_02 { top: 1350px;
+      .schedules_main_item_body {
+        height: calc(374px - 135px - 15px);
       }
     }
     .__a_07,.__b_07 { top: 1627px;}
