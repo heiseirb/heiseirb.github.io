@@ -2109,6 +2109,9 @@ main {
       @include mq (medium,max) {
         width: 86%;
       }
+      &._shrink {
+        transform: translateY(-50%) scale(0.6);
+      }
     }
   }
 
